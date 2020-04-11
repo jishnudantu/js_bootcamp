@@ -1,17 +1,17 @@
 const todos = [{
-    text: 'Order dog food',
+    text: 'Clean the kitchen',
     completed: false
 }, {
-    text: 'Clean kitchen',
+    text: 'Book Flights',
     completed: true
 }, {
-    text: 'Buy food',
+    text: 'Learn JS',
     completed: true
 }, {
-    text: 'Do work',
+    text: 'Walk the dog',
     completed: false
 }, {
-    text: 'Exercise',
+    text: 'Finish this course',
     completed: true
 }]
 
@@ -20,6 +20,14 @@ const todos = [{
 
 const incompleteTodos = todos.filter(function(todo){
     return !todo.completed
+})
+
+const paragraphs = document.querySelectorAll('p')
+
+paragraphs.forEach(function(paragraph) {
+    if(paragraph.textContent.includes('the')){
+        paragraph.remove()
+    }
 })
 
 const summary = document.createElement('h2')
